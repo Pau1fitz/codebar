@@ -1,4 +1,9 @@
 #Numbers Game
+puts "How many goes do you want"
+number = gets.chomp.to_i
+
+number = nil
+number ||= 1
 
 start = Time.now
 turns = 0
@@ -6,7 +11,7 @@ correct = 0
 wrong = 0
 
 
-while turns < 3
+while turns < number
 	turns += 1
 
 	x = Random.rand(1..10)
