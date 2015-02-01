@@ -1,1 +1,1 @@
-# codebar
+Repository used for codebar tutorials
