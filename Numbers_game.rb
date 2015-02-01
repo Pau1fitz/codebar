@@ -1,9 +1,7 @@
 #Numbers Game
+
 puts "How many goes do you want"
 number = gets.chomp.to_i
-
-number = nil
-number ||= 1
 
 start = Time.now
 turns = 0
@@ -35,3 +33,10 @@ duration = Time.now - start
 
 puts "Total time #{duration} seconds"
 puts "#{duration/turns} seconds per problem"
+puts "What's your name?"
+name = gets.chomp
+
+filename = "scores.txt"
+file = File.open(filename, "w")
+file.print "#{name} : #{duration}"
+file.close
